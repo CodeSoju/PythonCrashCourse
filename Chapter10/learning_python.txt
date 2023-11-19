@@ -1,0 +1,23 @@
+The open() function returns an object representing the file. Here
+open(filename) returns an object representing filename.txt. Python assigns
+this object to file_object, which we'll work with later in the program. 
+The keyword with closes the file once access to it is no longer needed. 
+
+rstrip() method removes, or stripes, any whitespace characters from the right side of a string. 
+
+Reading Line by Line
+Use a for loop
+with open(filename) as file_object:
+    for line in file_object:
+        print(line)
+
+readlines() method takes eaach line from the file and stored it in a list. 
+
+with open(filename) as file_object:
+    lines = file_object.readlines()
+
+pi_string = ''
+for line in lines:
+    pi_String += line.strip()
+
+print(pi_String)
